@@ -1,0 +1,118 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Diary Container */
+  .diary-container {
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+  }
+  
+  .diary {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .diary:hover {
+    transform: rotateY(-180deg);
+  }
+  
+  /* Diary Cover */
+  .diary-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d291bc;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .diary-cover h1 {
+    font-size: 24px;
+  }
+  
+  .diary-cover p {
+    font-size: 14px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Diary Content */
+  .diary-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff9e6;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 70%;
+    resize: none;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border-radius: 5px;
+    background-color: #fff2cc;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  #save-btn {
+    background-color: #82c91e;
+    color: #fff;
+  }
+  
+  #clear-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+  
