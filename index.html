@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
 <html lang="en">
+<link rel="stylesheet" href="style.css">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Magical Diary</title>
+  <title>Vintage Diary</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="diary-container">
-    <div class="diary">
-      <div class="diary-cover">
-        <h1>📖 My Magical Diary</h1>
-        <p>Click to open</p>
-      </div>
-      <div class="diary-content">
-        <textarea id="diary-entry" placeholder="Write your secret thoughts..."></textarea>
-        <div class="buttons">
-          <button id="save-btn">Save ✨</button>
-          <button id="clear-btn">Clear ❌</button>
+  <div id="login-screen">
+    <div class="login-container">
+      <h1>Welcome to Your Vintage Diary</h1>
+      <form id="login-form">
+        <label for="username">Enter your username:</label>
+        <input type="text" id="username" placeholder="Your Name" required>
+        <button type="submit">Start Writing</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="notebook-screen" style="display: none;">
+    <div class="header">
+      <h2>Welcome, <span id="display-username"></span>!</h2>
+    </div>
+    <div class="notebook">
+      <div class="cover">📓 My Vintage Diary</div>
+      <div class="content">
+        <div class="pages">
+          <div class="page">
+            <textarea class="diary-entry" placeholder="Write your thoughts here..."></textarea>
+            <div class="controls">
+              <button id="prev-btn" disabled>◀ Prev</button>
+              <button id="next-btn">Next ▶</button>
+            </div>
+          </div>
+        </div>
+        <div class="date-navigation">
+          <h3>Entries</h3>
+          <ul id="date-list"></ul>
         </div>
       </div>
     </div>
